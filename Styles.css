@@ -59,6 +59,10 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     animation: wave 2s ease-in-out infinite alternate;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @keyframes wave {
@@ -82,14 +86,14 @@
     gap: 30px;
     padding: 20px;
     overflow: hidden;
-    flex-wrap: wrap; /* Для адаптивности на мобильных устройствах */
+    flex-wrap: wrap;
 }
 
 .project {
-    flex: 1 1 calc(30% - 30px); /* Каждый проект занимает 30% с учетом зазоров */
+    flex: 1 1 calc(30% - 30px);
     max-width: calc(30% - 30px);
     text-align: center;
-    min-width: 250px; /* Минимальная ширина для проектов */
+    min-width: 250px;
 }
 
 .project img, .project video {
@@ -102,6 +106,26 @@
 .project h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 3em; 
+    }
+
+    .project h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .project h2 {
+        font-size: 1em; 
+    }
 }
 
 .contact-section {
