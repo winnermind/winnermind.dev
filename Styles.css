@@ -1,8 +1,8 @@
 ﻿body {
     margin: 0;
-    font-family: 'Comic Sans MS', sans-serif; /* Мультяшный шрифт */
+    font-family: 'Comic Sans MS', sans-serif;
     color: #fff;
-    background-color: #6a0dad; /* Фиолетовый фон */
+    background-color: #6a0dad;
     overflow-x: hidden;
     scroll-behavior: smooth;
     display: flex;
@@ -81,12 +81,12 @@
     align-items: center;
     gap: 30px;
     padding: 20px;
-    overflow: hidden; /* Чтобы проекты не выходили за рамки раздела */
+    overflow: hidden;
 }
 
 .project {
-    flex: 0 0 calc(30% - 30px); /* Каждый проект занимает 30% с учетом зазоров */
-    max-width: 100%; /* Проекты будут уменьшаться по ширине при уменьшении окна браузера */
+    flex: 0 0 calc(30% - 30px);
+    max-width: 100%;
     text-align: center;
 }
 
@@ -103,8 +103,6 @@
     border: 5px solid #fff;
     border-radius: 10px;
 }
-
-
 
 .project h2 {
     font-size: 1.5em;
