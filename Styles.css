@@ -77,20 +77,17 @@
     flex: 0 0 70%;
     background: linear-gradient(135deg, #8b01a6 0%, #45006c 100%);
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
-    padding: 40px 20px;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    overflow: hidden; /* Чтобы проекты не выходили за рамки раздела */
 }
 
 .project {
-    flex: 0 0 calc(33.33% - 40px);
+    flex: 0 0 calc(30% - 30px); /* Каждый проект занимает 30% с учетом зазоров */
+    max-width: 100%; /* Проекты будут уменьшаться по ширине при уменьшении окна браузера */
     text-align: center;
-}
-
-.project h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
 }
 
 .project img {
@@ -98,6 +95,20 @@
     height: auto;
     border: 5px solid #fff;
     border-radius: 10px;
+}
+
+.project video {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+
+
+.project h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 .contact-section {
