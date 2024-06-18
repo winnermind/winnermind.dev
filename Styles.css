@@ -1,0 +1,110 @@
+﻿body {
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif; /* Мультяшный шрифт */
+    color: #fff;
+    background-color: #6a0dad; /* Фиолетовый фон */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.nav a {
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    transition: transform 0.3s;
+}
+
+.nav a:hover {
+    transform: scale(1.2);
+}
+
+.nav a::before {
+    content: '≈';
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.header, .projects-section, .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header {
+    flex: 0 0 20%;
+    background: linear-gradient(135deg, #45006c 0%, #8b01a6 100%);
+}
+
+.header h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: wave 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.projects-section {
+    flex: 0 0 70%;
+    background: linear-gradient(135deg, #8b01a6 0%, #45006c 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.project {
+    flex: 0 0 calc(33.33% - 40px);
+    text-align: center;
+}
+
+.project h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
+
+.contact-section {
+    flex: 0 0 10%;
+    background: linear-gradient(135deg, #45006c 0%, #8b01a6 100%);
+}
+
+.contact-section p {
+    font-size: 1.5em;
+}
