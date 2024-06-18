@@ -117,3 +117,8 @@
 .contact-section p {
     font-size: 1.5em;
 }
+
+.mail {
+    color: #ffffff;
+    text-decoration: none;
+}
