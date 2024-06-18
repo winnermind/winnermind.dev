@@ -47,15 +47,17 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    flex-direction: column; /* Вертикальное расположение по умолчанию */
 }
 
 .header {
     flex: 0 0 20%;
     background: linear-gradient(135deg, #45006c 0%, #8b01a6 100%);
+    width: 100%; /* Полная ширина для адаптивности */
 }
 
 .header h1 {
-    font-size: 4em;
+    font-size: 4vw; /* Адаптивный размер шрифта заголовка */
     text-transform: uppercase;
     letter-spacing: 5px;
     animation: wave 2s ease-in-out infinite alternate;
@@ -85,15 +87,16 @@
     align-items: center;
     gap: 30px;
     padding: 20px;
-    overflow: hidden;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* По умолчанию проекты располагаются в одну строку */
+    box-sizing: border-box;
 }
 
 .project {
-    flex: 1 1 calc(30% - 30px);
+    flex: 0 0 calc(30% - 30px); 
     max-width: calc(30% - 30px);
+    min-width: 250px; 
     text-align: center;
-    min-width: 250px;
+    box-sizing: border-box;
 }
 
 .project img, .project video {
@@ -108,9 +111,16 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 3em; 
+
+@media (min-width: 768px) {
+    .projects-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .project h2 {
@@ -119,18 +129,31 @@
 }
 
 @media (max-width: 480px) {
+    .project h2 {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 480px) {
     .header h1 {
-        font-size: 2.5em;
+        font-size: 8vw;
+    }
+
+    .project {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .project h2 {
-        font-size: 1em; 
+        font-size: 1em;
     }
 }
 
 .contact-section {
     flex: 0 0 10%;
     background: linear-gradient(135deg, #45006c 0%, #8b01a6 100%);
+    width: 100%;
 }
 
 .contact-section p {
