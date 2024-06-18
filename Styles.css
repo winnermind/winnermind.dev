@@ -33,7 +33,7 @@
 }
 
 .nav a::before {
-    content: '≈';
+    content: '';
     display: inline-block;
     margin-right: 10px;
     color: #fff;
@@ -82,22 +82,17 @@
     gap: 30px;
     padding: 20px;
     overflow: hidden;
+    flex-wrap: wrap; /* Для адаптивности на мобильных устройствах */
 }
 
 .project {
-    flex: 0 0 calc(30% - 30px);
-    max-width: 100%;
+    flex: 1 1 calc(30% - 30px); /* Каждый проект занимает 30% с учетом зазоров */
+    max-width: calc(30% - 30px);
     text-align: center;
+    min-width: 250px; /* Минимальная ширина для проектов */
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #fff;
-    border-radius: 10px;
-}
-
-.project video {
+.project img, .project video {
     max-width: 100%;
     height: auto;
     border: 5px solid #fff;
